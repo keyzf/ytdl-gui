@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border: none;
+  border-collapse: collapse;
+}
+
+table th {
+  padding: .75rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+table th:nth-child(1) {
+  width: 40px;
+}
+
+table th:nth-child(2) {
+  width: 210px;
+}
+
+table th:nth-child(3) {
+  width: 150px;
+}
+
+table th:nth-child(4) {
+  width: 100px;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f8f8f8;
+}
+
+table td {
+  padding: .75rem 0;
+  font-weight: 300;  
+  overflow-x: hidden;
+  text-align: center;
+}
+
+.app {
+  width: 100vw;
+  height: 100vh;
+}
+
+.download-url-container {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background-color: #3F8EFC;
+}
+
+.input-url-wrapper {
+  flex-basis: 75%;
+  margin-right: 1rem;
+}
+
+.input-text {
+  display: block;
+  padding: .5rem;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.input-text::placeholder {
+  color: #fff;
+}
+
+.input-text:focus {
+  outline: none;
+}
+
+.download-btn-wrapper {
+  flex-basis: 25%;
+}
+
+.download-btn {
+  padding: .5rem 1rem;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #9CC5FC;
+  background-color: #6DA9FB;
+  color: #fff;
+}
+
+.download-btn:active {
+  cursor: default;
+}
+
+.navigation-wrapper {
+  display: flex;
+  background-color: #3F8EFC;
+}
+
+.navigation-wrapper > a {
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  color: #fff;
+}
+
+.navigation-wrapper > a:first-child {
+  background-color: #fff;
+  color: #3F8EFC;
+}
+
+.video-download-container {
+  display: flex;
+  height: 100%;
+}
+
+.video-dl-list-wrapper {
+  width: 500px;
+  height: 79%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.video-dl-opt-wrapper {
+  width: 300px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-left: 1px solid #ddd;
+}
+
+.thumbnail-wrapper > img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}

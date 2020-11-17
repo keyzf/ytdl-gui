@@ -1,21 +1,131 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-  </head>
-  <body>
-    <div>Test</div>
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./dist/renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" /> -->
+  <link rel="stylesheet" href="./assets/fonts/Roboto/font-face.css">
+  <link rel="stylesheet" href="./assets/css/normalize.min.css">
+  <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- Input Form -->
+    <div class="download-url-container">
+      <div class="input-url-wrapper">
+        <input type="text" id="inputUrl" class="input-text" placeholder="Enter your URL here..." />
+      </div>
+      <div class="download-btn-wrapper">
+        <button id="btnDownload" class="download-btn">DOWNLOAD</button>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation-wrapper">
+      <a href="#main">Download List</a>
+      <a href="#settings">Settings</a>
+    </div>
+
+    <!-- Download Preview -->
+    <div class="video-download-container">
+      <div class="video-dl-list-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+              <th>Date</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>SQUISH THAT CAT</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>ALL YOU NEED TO KNOW</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>IS TO SQUISH THAT CAT</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>SQUISH THAT CAT</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>ALL YOU NEED TO KNOW</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>IS TO SQUISH THAT CAT</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>SQUISH THAT CAT</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>ALL YOU NEED TO KNOW</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>IS TO SQUISH THAT CAT</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>SQUISH THAT CAT</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>ALL YOU NEED TO KNOW</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>IS TO SQUISH THAT CAT</td>
+              <td>19:11 17/11/2020</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="video-dl-opt-wrapper">
+        <div class="thumbnail-wrapper">
+          <img src="https://i.ytimg.com/vi/5jKZ9KGtee0/hqdefault.jpg"/>
+        </div>
+        <div class=""></div>
+      </div>
+    </div>
+  </div>
+  <script src="./dist/renderer.js"></script>
+</body>
+
 </html>
