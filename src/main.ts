@@ -1,5 +1,9 @@
-import { app, BrowserWindow } from "electron";
+import fs from 'fs';
+import ytdl from 'ytdl-core';
 import * as path from "path";
+import { app, BrowserWindow, ipcMain } from "electron";
+
+import addDLHistory from './helper/add-dl-history';
 
 function createWindow() {
   // Create the browser window.
@@ -7,6 +11,7 @@ function createWindow() {
     height: 600,
     resizable: false,
     webPreferences: {
+      nodeIntegration: true,
       preload: path.join(__dirname, "preload.js"),
     },
     width: 800,
@@ -17,6 +22,25 @@ function createWindow() {
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, "../index.html"));
 }
+
+ipcMain.on("YTDL:DOWNLOAD_START", function (event, arg) {
+  const currentIndex = arg.current;
+  
+  const _stream = ytdl(arg.url, { filter: f => f.container === 'mp4' });
+  _stream.on('info', (info) => {
+    addDLHistory({ filename: `${info.videoDetails.title}.mp4`, date: Date.now() });
+    _stream.pipe(fs.createWriteStream(`./downloads/${info.videoDetails.title}.mp4`));
+  })
+  _stream.on('end', () => {
+    event.sender.send("YTDL:DOWNLOAD_END");
+  });
+  _stream.on('error', (err) => {
+    event.sender.send("YTDL:DOWNLOAD_ERROR");
+  });
+  _stream.on('progress', (length, downloaded, total) => {
+    event.sender.send("YTDL:DOWNLOAD_PROGRESS", Math.round(downloaded / total * 100));
+  });
+});
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
