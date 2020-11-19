@@ -24,33 +24,47 @@
     </div>
 
     <!-- Navigation -->
-    <div class="navigation-wrapper">
-      <a href="#main">Download List</a>
-      <a href="#history">History</a>
+    <div id="nav" class="navigation-wrapper">
+      <a href="#currentDl">Download List</a>
+      <a href="#dlHistory" class="nav-current">History</a>
       <a href="#settings">Settings</a>
     </div>
 
-    <!-- Download Preview -->
-    <div class="video-download-container">
-      <div class="video-dl-list-wrapper">
-        <table>
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Title</th>
-              <th>Date</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody id="dlList">
-          </tbody>
-        </table>
+    <!-- Main Content -->
+    <div class="main-content-wrapper">
+
+      <!-- Current Downloads -->
+      <div id="currentDl" class="current-dl-container hide">
+
       </div>
-      <div class="video-dl-opt-wrapper">
-        <div class="thumbnail-wrapper">
-          <img src="https://i.ytimg.com/vi/5jKZ9KGtee0/hqdefault.jpg" />
+
+      <!-- Download History -->
+      <div id="dlHistory" class="video-download-container">
+        <div class="video-dl-list-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="dlHistoryList">
+            </tbody>
+          </table>
         </div>
-        <div class=""></div>
+        <div class="video-dl-opt-wrapper">
+          <div class="thumbnail-wrapper">
+            <img src="https://i.ytimg.com/vi/5jKZ9KGtee0/hqdefault.jpg" />
+          </div>
+          <div class=""></div>
+        </div>
+      </div>
+
+      <!-- Settings -->
+      <div id="settings" class="settings-container hide">
+
       </div>
     </div>
   </div>

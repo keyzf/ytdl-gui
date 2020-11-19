@@ -48,6 +48,10 @@ table td {
   text-align: center;
 }
 
+.hide {
+  display: none !important;
+}
+
 .app {
   width: 100vw;
   height: 100vh;
@@ -113,7 +117,7 @@ table td {
   color: #fff;
 }
 
-.navigation-wrapper > a:first-child {
+.navigation-wrapper > a.nav-current {
   background-color: #fff;
   color: #3F8EFC;
 }
